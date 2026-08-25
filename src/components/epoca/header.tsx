@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { NAVIGATION_CATEGORIES, STORE_CONFIG } from '@/data/epoca-data';
+import { NAVIGATION_CATEGORIES } from '@/data/epoca-data';
 import { Search, ShoppingBag, Menu, User, ChevronDown } from 'lucide-react';
 
 interface HeaderProps {
@@ -38,12 +38,12 @@ export function Header({
           : 'bg-[#FAF9F6] border-b border-[#EFECE6]'
       }`}
     >
-      {/* Top Header Bar with True 3-Column CSS Grid (Guarantees exact 50% center on all viewports) */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-3 items-center h-20 sm:h-24">
-          {/* Left Controls (justify-self-start) */}
-          <div className="justify-self-start flex items-center">
-            {/* Mobile Menu & Search Buttons (Touch target >= 44x44px) */}
+      {/* Top Header Bar with Absolute Centered Logo for 100% Viewport Symmetry */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="flex items-center justify-between h-20 sm:h-24">
+          {/* Left Actions (Mobile Menu & Search) */}
+          <div className="flex items-center z-10">
+            {/* Mobile Controls (Touch targets >= 44x44px) */}
             <div className="flex items-center lg:hidden">
               <button
                 onClick={onOpenMobileMenu}
@@ -65,49 +65,34 @@ export function Header({
             <div className="hidden lg:flex items-center">
               <button
                 onClick={onOpenSearch}
-                className="flex items-center space-x-2.5 text-xs text-[#736E65] hover:text-[#16203B] transition-colors py-2 px-3.5 rounded-full bg-[#F5F3EF] border border-[#E8E4DC]/80 group w-64 focus:outline-none focus:ring-1 focus:ring-[#C5A880]"
+                className="flex items-center space-x-2.5 text-xs text-[#736E65] hover:text-[#16203B] transition-colors py-2 px-3.5 rounded-full bg-[#F5F3EF] border border-[#E8E4DC]/80 group w-60 xl:w-68 focus:outline-none focus:ring-1 focus:ring-[#C5A880]"
               >
                 <Search className="w-3.5 h-3.5 text-[#736E65] group-hover:text-[#16203B] transition-colors" />
-                <span className="font-light tracking-wide">Buscar sastrería, abrigos...</span>
+                <span className="font-light tracking-wide truncate">Buscar sastrería, abrigos...</span>
               </button>
             </div>
           </div>
 
-          {/* Center Brand Logo (justify-self-center -> EXACT 50% Viewport Center) */}
-          <div className="justify-self-center flex items-center justify-center">
+          {/* Center Brand Identity (Pure Typography Vector, Absolute Centered at 50% of viewport) */}
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-auto">
             <Link
               href="/"
-              className="group flex items-center space-x-3 focus:outline-none focus:ring-2 focus:ring-[#C5A880]/50 rounded-xs py-1 px-1.5"
+              className="group flex flex-col items-center justify-center text-center focus:outline-none focus:ring-2 focus:ring-[#C5A880]/40 rounded-xs py-1 px-2 select-none"
             >
-              {/* Official Round Emblem */}
-              <div className="relative w-[50px] h-[50px] sm:w-[58px] sm:h-[58px] rounded-full overflow-hidden shadow-xs shrink-0 group-hover:scale-105 transition-transform duration-300">
-                <Image
-                  src="/images/epoca/brand/logo-epoca-round.webp"
-                  alt="ÉPOCA Indumentaria"
-                  fill
-                  priority
-                  sizes="58px"
-                  className="object-contain"
-                />
-              </div>
-
-              {/* Wordmark (hidden on smaller mobile to keep focus on round emblem, visible on sm+) */}
-              <div className="hidden sm:flex flex-col text-left">
-                <span className="font-editorial text-2xl md:text-3xl tracking-[0.2em] font-normal uppercase text-[#16203B] group-hover:text-[#C5A880] transition-colors duration-300 leading-none">
-                  {STORE_CONFIG.brand}
-                </span>
-                <span className="text-[8px] md:text-[9px] tracking-[0.45em] text-[#736E65] uppercase font-semibold mt-1">
-                  INDUMENTARIA
-                </span>
-              </div>
+              <span className="font-editorial text-3xl sm:text-4xl md:text-5xl tracking-[0.18em] font-normal uppercase text-[#16203B] group-hover:text-[#C5A880] transition-colors duration-300 leading-none pl-[0.18em]">
+                ÉPOCA
+              </span>
+              <span className="text-[8.5px] sm:text-[9.5px] md:text-[10px] tracking-[0.42em] text-[#736E65] uppercase font-semibold mt-1 pl-[0.42em]">
+                INDUMENTARIA
+              </span>
             </Link>
           </div>
 
-          {/* Right Controls (justify-self-end) */}
-          <div className="justify-self-end flex items-center space-x-1 sm:space-x-4">
+          {/* Right Actions (Boutique, Account & Cart) */}
+          <div className="flex items-center space-x-1 sm:space-x-3 z-10">
             <a
               href="#boutique"
-              className="hidden lg:inline-flex text-[11px] font-medium tracking-[0.18em] uppercase text-[#736E65] hover:text-[#16203B] transition-colors"
+              className="hidden lg:inline-flex text-[11px] font-medium tracking-[0.18em] uppercase text-[#736E65] hover:text-[#16203B] transition-colors pr-2"
             >
               Boutique
             </a>

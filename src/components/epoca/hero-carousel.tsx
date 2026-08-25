@@ -122,7 +122,7 @@ export function HeroCarousel() {
                           priority={isFirstSlide}
                           loading={isFirstSlide ? 'eager' : 'lazy'}
                           fetchPriority={isFirstSlide ? 'high' : 'auto'}
-                          sizes="(max-width: 1024px) 100vw, (max-width: 1440px) 42vw, 560px"
+                          sizes="(max-width: 1024px) 100vw, (max-width: 1440px) 45vw, 600px"
                           className="object-cover object-center group-hover:scale-103 transition-transform duration-1000 ease-out"
                         />
                         {/* Subtle inner shadow to blend frame */}
@@ -144,7 +144,7 @@ export function HeroCarousel() {
                     priority={isFirstSlide}
                     loading={isFirstSlide ? 'eager' : 'lazy'}
                     fetchPriority={isFirstSlide ? 'high' : 'auto'}
-                    sizes="(max-width: 768px) 100vw, 100vw"
+                    sizes="(max-width: 1024px) 100vw, 100vw"
                     className={`object-cover ${slide.mobilePosition || 'object-center'}`}
                   />
                   {/* Heavy Deep Navy Gradient so text is 100% readable without covering face */}
@@ -204,7 +204,7 @@ export function HeroCarousel() {
         </button>
       </div>
 
-      {/* Bottom Control Bar with Integrated Compact Controls (Active dot with brand ring gradient) */}
+      {/* Bottom Control Bar with Integrated Compact Controls (Active dot in warm gold) */}
       <div className="absolute bottom-3 sm:bottom-4 left-1/2 -translate-x-1/2 z-20 flex items-center space-x-2 sm:space-x-3 bg-[#0C1014]/80 px-3 py-1.5 rounded-full backdrop-blur-md border border-[#C5A880]/30 shadow-lg">
         {/* Mobile/Tablet Prev Button */}
         <button
@@ -224,7 +224,7 @@ export function HeroCarousel() {
               aria-label={`Ir a la diapositiva ${idx + 1}`}
               className={`h-1.5 transition-all duration-300 rounded-full ${
                 idx === currentSlide
-                  ? 'w-6 bg-gradient-to-r from-[#D300C5] via-[#FF5F18] to-[#EAB802]'
+                  ? 'w-6 bg-[#C5A880]'
                   : 'w-2 bg-white/40 hover:bg-white/70'
               }`}
             />

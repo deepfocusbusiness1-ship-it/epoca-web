@@ -15,14 +15,11 @@
   --color-epoca-navy-dark: var(--epoca-navy-dark);
   --color-epoca-navy-deep: var(--epoca-navy-deep);
   --color-epoca-gold: var(--epoca-gold);
-  --color-epoca-gold-bright: var(--epoca-gold-bright);
-  --color-epoca-gold-vibrant: var(--epoca-gold-vibrant);
+  --color-epoca-gold-light: var(--epoca-gold-light);
   --color-epoca-ivory: var(--epoca-ivory);
-  --color-epoca-ivory-light: var(--epoca-ivory-light);
-  --color-epoca-black: var(--epoca-black);
-  --color-epoca-magenta: var(--epoca-magenta);
-  --color-epoca-orange: var(--epoca-orange);
-  --color-epoca-yellow: var(--epoca-yellow);
+  --color-epoca-ivory-warm: var(--epoca-ivory-warm);
+  --color-epoca-sand: var(--epoca-sand);
+  --color-epoca-muted: var(--epoca-muted);
 
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -57,21 +54,16 @@
 }
 
 :root {
-  /* ÉPOCA Brand Color System - Sampled directly from official reference */
-  --epoca-navy: #16203B;
-  --epoca-navy-dark: #0C1014;
-  --epoca-navy-deep: #0A0E1A;
-  --epoca-gold: #C5A880;
-  --epoca-gold-bright: #DFB76C;
-  --epoca-gold-vibrant: #FFCA00;
-  --epoca-ivory: #FAF9F6;
-  --epoca-ivory-light: #F5F3EF;
-  --epoca-black: #0C1014;
-  --epoca-magenta: #D300C5;
-  --epoca-magenta-deep: #DE00AC;
-  --epoca-orange: #FF5F18;
-  --epoca-yellow: #EAB802;
-  --epoca-ring-gradient: linear-gradient(135deg, #D300C5 0%, #DE00AC 25%, #FF5F18 60%, #EAB802 100%);
+  /* ÉPOCA Institutional Brand Color System */
+  --epoca-navy: #16203B;          /* Azul marino institucional */
+  --epoca-navy-dark: #0C1014;     /* Azul marino profundo / fondos nocturnos */
+  --epoca-navy-deep: #0A0E1A;     /* Base oscura boutique */
+  --epoca-gold: #C5A880;          /* Dorado cálido de letras y acentos */
+  --epoca-gold-light: #DFB76C;    /* Dorado suave */
+  --epoca-ivory: #FAF9F6;         /* Marfil clásico para fondos */
+  --epoca-ivory-warm: #F5F3EF;    /* Marfil secundario */
+  --epoca-sand: #E8E4DC;          /* Arena para bordes finos */
+  --epoca-muted: #736E65;         /* Tono neutro apagado para subtítulos */
 
   /* UI Tokens */
   --background: #FAF9F6;
@@ -105,15 +97,6 @@
   h1, h2, h3, .font-editorial {
     font-family: var(--font-serif), Georgia, serif;
   }
-}
-
-/* Época Brand Gradient Line */
-.epoca-ring-line {
-  background: var(--epoca-ring-gradient);
-}
-
-.epoca-ring-border {
-  border-image: var(--epoca-ring-gradient) 1;
 }
 
 /* Custom sleek scrollbar */

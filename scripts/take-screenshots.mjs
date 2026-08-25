@@ -31,8 +31,8 @@ async function capture() {
   await mobilePage.screenshot({ path: mobileScreenshotPath, fullPage: false });
   console.log('Mobile screenshot saved to:', mobileScreenshotPath);
 
-  // Also check 320, 360, 412, 430 px center position
-  const widths = [320, 360, 390, 412, 430];
+  // Check 320, 360, 390, 412, 430, 768, 1024, 1440 px center position
+  const widths = [320, 360, 390, 412, 430, 768, 1024, 1440];
   for (const w of widths) {
     await mobilePage.setViewportSize({ width: w, height: 800 });
     await mobilePage.waitForTimeout(100);
@@ -41,7 +41,7 @@ async function capture() {
       const logoCenter = logoBox.x + logoBox.width / 2;
       const screenCenter = w / 2;
       const diff = Math.abs(logoCenter - screenCenter);
-      console.log(`Viewport ${w}px: Screen center=${screenCenter}px, Logo center=${logoCenter.toFixed(1)}px, Offset=${diff.toFixed(2)}px`);
+      console.log(`Viewport ${w}px: Screen center=${screenCenter}px, Logo center=${logoCenter.toFixed(2)}px, Offset=${diff.toFixed(2)}px`);
     }
   }
 

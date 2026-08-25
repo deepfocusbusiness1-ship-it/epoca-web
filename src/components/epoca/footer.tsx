@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { MapPin, Phone, ArrowUp } from 'lucide-react';
 import { InstagramIcon } from '@/components/icons';
 import { STORE_CONFIG } from '@/data/epoca-data';
@@ -14,35 +13,21 @@ export function Footer() {
 
   return (
     <footer className="bg-[#0C1014] text-[#FAF9F6] border-t border-[#1E2638] relative overflow-hidden pt-16 pb-12">
-      {/* Subtle brand ring gradient accent line at the very top of footer */}
-      <div className="absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-[#D300C5]/40 via-[#FF5F18]/50 to-[#EAB802]/40" />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-14 border-b border-[#1E2638]">
-          {/* Brand Info with Official Round Logo */}
+          {/* Brand Info (Pure Inverted Typography in Gold & Ivory) */}
           <div className="lg:col-span-2 space-y-4">
-            <div className="flex items-center space-x-3.5">
-              <div className="relative w-12 h-12 rounded-full overflow-hidden shrink-0 shadow-md">
-                <Image
-                  src="/images/epoca/brand/logo-epoca-round.webp"
-                  alt="ÉPOCA Indumentaria"
-                  fill
-                  sizes="48px"
-                  className="object-contain"
-                />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-editorial text-2xl tracking-[0.2em] font-normal uppercase text-white leading-none">
-                  {STORE_CONFIG.brand}
-                </span>
-                <span className="text-[8px] tracking-[0.45em] text-[#C5A880] uppercase font-semibold mt-1">
-                  INDUMENTARIA
-                </span>
-              </div>
+            <div className="flex flex-col">
+              <span className="font-editorial text-3xl sm:text-4xl tracking-[0.18em] font-normal uppercase text-[#C5A880] leading-none pl-[0.18em]">
+                {STORE_CONFIG.brand}
+              </span>
+              <span className="text-[8.5px] sm:text-[9px] tracking-[0.45em] text-[#D8D2C6] uppercase font-semibold mt-1.5 pl-[0.45em]">
+                INDUMENTARIA
+              </span>
             </div>
 
-            <p className="text-xs text-[#D8D2C6]/85 font-light leading-relaxed max-w-sm">
+            <p className="text-xs text-[#D8D2C6]/85 font-light leading-relaxed max-w-sm pt-1">
               Sastrería de autor, prendas de lino, abrigos Perramus y calzado artesanal. Diseñado para quienes aprecian la elegancia atemporal y la confección de excelencia.
             </p>
 

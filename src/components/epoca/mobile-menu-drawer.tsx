@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { NAVIGATION_CATEGORIES, STORE_CONFIG } from '@/data/epoca-data';
 import { X, ChevronDown, MapPin, Phone, ArrowRight } from 'lucide-react';
 import { InstagramIcon } from '@/components/icons';
@@ -33,24 +32,13 @@ export function MobileMenuDrawer({ isOpen, onClose }: MobileMenuDrawerProps) {
       <div className="fixed inset-y-0 left-0 w-[85%] max-w-sm bg-[#FAF9F6] shadow-2xl flex flex-col z-50 overflow-y-auto animate-in slide-in-from-left duration-300">
         {/* Header */}
         <div className="flex items-center justify-between p-5 sm:p-6 border-b border-[#E8E4DC]">
-          <div className="flex items-center space-x-3">
-            <div className="relative w-10 h-10 rounded-full overflow-hidden shrink-0 shadow-xs">
-              <Image
-                src="/images/epoca/brand/logo-epoca-round.webp"
-                alt="ÉPOCA Indumentaria"
-                fill
-                sizes="40px"
-                className="object-contain"
-              />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-editorial text-xl tracking-[0.18em] font-normal uppercase text-[#16203B] leading-none">
-                {STORE_CONFIG.brand}
-              </span>
-              <span className="text-[8px] tracking-[0.4em] text-[#736E65] uppercase font-medium mt-1">
-                INDUMENTARIA
-              </span>
-            </div>
+          <div className="flex flex-col">
+            <span className="font-editorial text-2xl tracking-[0.18em] font-normal uppercase text-[#16203B] leading-none pl-[0.18em]">
+              {STORE_CONFIG.brand}
+            </span>
+            <span className="text-[8px] tracking-[0.42em] text-[#736E65] uppercase font-semibold mt-1 pl-[0.42em]">
+              INDUMENTARIA
+            </span>
           </div>
 
           <button
