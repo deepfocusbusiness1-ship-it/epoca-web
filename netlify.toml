@@ -1,0 +1,27 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NETLIFY_FEEDBACK_DRAWER = "false"
+  NETLIFY_DRAWER_ENABLED = "false"
+  NEXT_PUBLIC_NETLIFY_FEEDBACK_DRAWER = "false"
+
+[context.production.environment]
+  NETLIFY_FEEDBACK_DRAWER = "false"
+  NETLIFY_DRAWER_ENABLED = "false"
+
+[context.deploy-preview.environment]
+  NETLIFY_FEEDBACK_DRAWER = "false"
+  NETLIFY_DRAWER_ENABLED = "false"
+
+[context.branch-deploy.environment]
+  NETLIFY_FEEDBACK_DRAWER = "false"
+  NETLIFY_DRAWER_ENABLED = "false"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
