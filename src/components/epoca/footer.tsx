@@ -16,15 +16,17 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-14 border-b border-[#1E2638]">
-          {/* Brand Info (Pure Inverted Typography in Gold & Ivory) */}
-          <div className="lg:col-span-2 space-y-4">
-            <div className="flex flex-col">
-              <span className="font-editorial text-3xl sm:text-4xl tracking-[0.18em] font-normal uppercase text-[#C5A880] leading-none pl-[0.18em]">
-                {STORE_CONFIG.brand}
-              </span>
-              <span className="text-[8.5px] sm:text-[9px] tracking-[0.45em] text-[#D8D2C6] uppercase font-semibold mt-1.5 pl-[0.45em]">
-                INDUMENTARIA
-              </span>
+          {/* Brand Info (Institutional Rectangular Navy Plaque in Gold & Ivory) */}
+          <div className="lg:col-span-2 space-y-5">
+            <div className="inline-block bg-[#16203B] px-5 py-2.5 rounded-[2px] border border-[#C5A880]/35 shadow-sm">
+              <div className="flex flex-col items-center justify-center text-center">
+                <span className="font-editorial text-2xl sm:text-3xl tracking-[0.2em] font-normal uppercase text-[#C5A880] leading-none pl-[0.2em]">
+                  {STORE_CONFIG.brand}
+                </span>
+                <span className="text-[7.5px] sm:text-[8.5px] tracking-[0.42em] text-[#FAF9F6]/90 uppercase font-medium mt-1 pl-[0.42em]">
+                  INDUMENTARIA
+                </span>
+              </div>
             </div>
 
             <p className="text-xs text-[#D8D2C6]/85 font-light leading-relaxed max-w-sm pt-1">

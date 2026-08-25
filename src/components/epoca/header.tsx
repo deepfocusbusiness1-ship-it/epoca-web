@@ -73,16 +73,16 @@ export function Header({
             </div>
           </div>
 
-          {/* Center Brand Identity (Pure Typography Vector, Absolute Centered at 50% of viewport) */}
+          {/* Center Brand Identity (Institutional Rectangular Navy Plaque with Warm Gold Typography) */}
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-auto">
             <Link
               href="/"
-              className="group flex flex-col items-center justify-center text-center focus:outline-none focus:ring-2 focus:ring-[#C5A880]/40 rounded-xs py-1 px-2 select-none"
+              className="group flex flex-col items-center justify-center text-center bg-[#16203B] px-3.5 py-1.5 sm:px-6 sm:py-2.5 rounded-[2px] shadow-xs hover:shadow-md border border-[#C5A880]/30 hover:border-[#C5A880]/70 transition-all duration-300 select-none"
             >
-              <span className="font-editorial text-3xl sm:text-4xl md:text-5xl tracking-[0.18em] font-normal uppercase text-[#16203B] group-hover:text-[#C5A880] transition-colors duration-300 leading-none pl-[0.18em]">
+              <span className="font-editorial text-2xl sm:text-3xl md:text-4xl tracking-[0.2em] font-normal uppercase text-[#C5A880] group-hover:text-[#DFB76C] transition-colors duration-300 leading-none pl-[0.2em]">
                 ÉPOCA
               </span>
-              <span className="text-[8.5px] sm:text-[9.5px] md:text-[10px] tracking-[0.42em] text-[#736E65] uppercase font-semibold mt-1 pl-[0.42em]">
+              <span className="text-[7px] sm:text-[8px] md:text-[9px] tracking-[0.42em] text-[#FAF9F6]/90 group-hover:text-white uppercase font-medium mt-1 pl-[0.42em]">
                 INDUMENTARIA
               </span>
             </Link>
@@ -156,7 +156,7 @@ export function Header({
                             src={cat.bannerImage}
                             alt={cat.bannerTitle || cat.title}
                             fill
-                            sizes="300px"
+                            sizes="320px"
                             className="object-cover object-[center_20%]"
                           />
                           {cat.bannerTitle && (

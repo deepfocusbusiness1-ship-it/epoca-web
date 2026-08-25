@@ -32,13 +32,15 @@ export function MobileMenuDrawer({ isOpen, onClose }: MobileMenuDrawerProps) {
       <div className="fixed inset-y-0 left-0 w-[85%] max-w-sm bg-[#FAF9F6] shadow-2xl flex flex-col z-50 overflow-y-auto animate-in slide-in-from-left duration-300">
         {/* Header */}
         <div className="flex items-center justify-between p-5 sm:p-6 border-b border-[#E8E4DC]">
-          <div className="flex flex-col">
-            <span className="font-editorial text-2xl tracking-[0.18em] font-normal uppercase text-[#16203B] leading-none pl-[0.18em]">
-              {STORE_CONFIG.brand}
-            </span>
-            <span className="text-[8px] tracking-[0.42em] text-[#736E65] uppercase font-semibold mt-1 pl-[0.42em]">
-              INDUMENTARIA
-            </span>
+          <div className="bg-[#16203B] px-3.5 py-1.5 rounded-[2px] border border-[#C5A880]/30 shadow-2xs">
+            <div className="flex flex-col items-center justify-center text-center">
+              <span className="font-editorial text-2xl tracking-[0.2em] font-normal uppercase text-[#C5A880] leading-none pl-[0.2em]">
+                {STORE_CONFIG.brand}
+              </span>
+              <span className="text-[7.5px] tracking-[0.42em] text-[#FAF9F6]/90 uppercase font-medium mt-1 pl-[0.42em]">
+                INDUMENTARIA
+              </span>
+            </div>
           </div>
 
           <button

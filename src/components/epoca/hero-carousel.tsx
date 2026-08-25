@@ -62,7 +62,7 @@ export function HeroCarousel() {
                     alt=""
                     fill
                     aria-hidden="true"
-                    sizes="100vw"
+                    sizes="(max-width: 1024px) 0vw, 100vw"
                     priority={isFirstSlide}
                     loading={isFirstSlide ? 'eager' : 'lazy'}
                     fetchPriority="auto"
@@ -122,7 +122,7 @@ export function HeroCarousel() {
                           priority={isFirstSlide}
                           loading={isFirstSlide ? 'eager' : 'lazy'}
                           fetchPriority={isFirstSlide ? 'high' : 'auto'}
-                          sizes="(max-width: 1024px) 100vw, (max-width: 1440px) 45vw, 600px"
+                          sizes="(max-width: 1024px) 0vw, (max-width: 1280px) 42vw, (max-width: 1536px) 38vw, 550px"
                           className="object-cover object-center group-hover:scale-103 transition-transform duration-1000 ease-out"
                         />
                         {/* Subtle inner shadow to blend frame */}
@@ -144,7 +144,7 @@ export function HeroCarousel() {
                     priority={isFirstSlide}
                     loading={isFirstSlide ? 'eager' : 'lazy'}
                     fetchPriority={isFirstSlide ? 'high' : 'auto'}
-                    sizes="(max-width: 1024px) 100vw, 100vw"
+                    sizes="(max-width: 1024px) 100vw, 0vw"
                     className={`object-cover ${slide.mobilePosition || 'object-center'}`}
                   />
                   {/* Heavy Deep Navy Gradient so text is 100% readable without covering face */}
